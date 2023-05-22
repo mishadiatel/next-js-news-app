@@ -9,7 +9,7 @@ interface NewsArticlesGridProps {
 const NewsArticlesGrid: React.FC<NewsArticlesGridProps> = ({articles}) => {
     return (
         <Row xs={1} sm={2} xl={3} className={'g-4'}>
-            {articles.map(article => (
+            {articles && articles.map((article: NewsArticle) => (
                 <Col key={article.url}>
                     <NewsArticleEntry article={article} />
                 </Col>
